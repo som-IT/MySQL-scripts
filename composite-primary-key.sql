@@ -22,8 +22,7 @@ CREATE TABLE projects (
 CREATE TABLE employees_projects (
     emp_id INT,
     project_id INT,
-    PRIMARY KEY(emp_id, project_id),
-    -- Composite Primary key
+    PRIMARY KEY(emp_id, project_id),  -- Composite Primary key
     FOREIGN KEY (emp_id) REFERENCES employees(id) ON DELETE CASCADE,
     FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
 );
